@@ -1,20 +1,13 @@
 import axios from "axios";
 
 export default {
-  // Gets all Documents
-  getDocuments: function() {
-    return axios.get("/api/collectionName");
+  getLunch: function() {
+    return axios.get("/api/lunch");
   },
-  // Gets the Document with the given id
-  getDocument: function(id) {
-    return axios.get("/api/collectionName/" + id);
+  getDinner: function() {
+    return axios.get("/api/dinner")
   },
-  // Deletes the Document with the given id
-  deleteDocument: function(id) {
-    return axios.delete("/api/collectionName/" + id);
-  },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/collectionName", bookData);
+  getAppetizers: function() {
+    return axios.get("/api/appetizers")
   }
 };

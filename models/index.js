@@ -1,3 +1,5 @@
 module.exports = {
-  CollectionName: require("./collectionName.js")
+  Appetizers: require("./appetizers.js"),
+  Lunch: require("./lunch.js"),
+  Dinner: require("./dinner.js")
 };

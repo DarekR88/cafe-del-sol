@@ -1,26 +1,11 @@
-/***************|
-|* DEPENDECIES *|
-|***************/
-/* WEB FRAMEWORKS */
-// create instance of express router
 const router = require("express").Router();
 
-/**********************************|
-|*  SET UP INDIVIDUAL API ROUTES  *|
-|**********************************/
-// Import in individual routes
-const collectionNameRoutes = require("./collectionName");
-const scrapeRoutes = require("./scrape");
+const lunchRoutes = require("./lunch")
+const dinnerRoutes = require("./dinner")
+const appetizerRoutes = require("./appetizers")
 
-// Sets path to use individual routes
-// EXAMPLE:
-//   router.use("/collectionName", collectionNameRoutes);
-//   // www.url.com/api/collectionName will use routes from collectionNameRoutes
-router.use("/collectionName", collectionNameRoutes);
-router.use("/scrape", scrapeRoutes);
+router.use("/lunch", lunchRoutes);
+router.use("/dinner", dinnerRoutes);
+router.use("/appetizers", appetizerRoutes);
 
-/***********|
-|* EXPORTS *| 
-|***********/
-// Export instance of express router which contains API routes
 module.exports = router;
