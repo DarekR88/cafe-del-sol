@@ -12,7 +12,7 @@ let DinnerSchema = new Schema({
     },
     active: {
         type: Boolean,
-        default: false
+        default: true
     },
     items: [{}]
 })
