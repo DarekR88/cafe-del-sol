@@ -1,1 +1,0 @@
-export { AdminLogin } from "./Footer.js";

@@ -5,12 +5,14 @@ import XPageTwo from './pages/XPageTwo'
 import XCollection from './pages/XCollection'
 import XNoMatch from './pages/XNoMatch';
 import { XNav } from './components/XNav';
+import { Logo } from './components/Jumbotron';
 
 class App extends Component {
   render() {
     return <Router forceRefresh={!'pushState' in window.history}>
       <div>
-        <XNav />
+        {/* <XNav /> */}
+        <Logo />
         <Switch>
           <Route exact path='/' component={XPage} />
           <Route exact path='/XPageTwo' component={XPageTwo} />

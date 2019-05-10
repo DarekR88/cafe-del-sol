@@ -1,17 +1,20 @@
 import React from 'react';
 import { Jumbotron, Container } from 'reactstrap';
+import { XNav } from '../XNav'
+// import './Jumbotron.css';
 
 const Logo = (props) => {
   return (
     <div>
       <Jumbotron fluid>
         <Container fluid>
-          <h1 className="display-3">Fluid jumbotron</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <h1 className="display-3">Practice Page</h1>
+          <p className="lead">123 Info Here.</p>
+          <XNav />
         </Container>
       </Jumbotron>
     </div>
   );
 };
 
-export default Logo;
+export { Logo };
