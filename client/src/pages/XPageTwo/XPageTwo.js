@@ -51,6 +51,7 @@ class XPageTwo extends Component {
           placeholder="Price (required)"
         />
         <TextArea
+          className="textArea"
           value={this.state.description}
           onChange={this.handleInputChange}
           name="description"
