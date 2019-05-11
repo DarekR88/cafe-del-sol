@@ -40,37 +40,37 @@ class XPageTwo extends Component {
       <XComponentTwo array={this.state.array} string={this.state.string} /> */}
       <br />
       <div className='PageTwoDiv'>
-      <AdminList className='AdminList' />
-      <form className='Admin-Input'>
-        <Input
-          value={this.state.name}
-          onChange={this.handleInputChange}
-          name="name"
-          placeholder="Name (required)"
-        />
-        <Dropdown />
-        <br />
-        <br />
-        <Input
-          value={this.state.price}
-          onChange={this.handleInputChange}
-          name="price"
-          placeholder="Price (required)"
-        />
-        <TextArea
-          className="textArea"
-          value={this.state.description}
-          onChange={this.handleInputChange}
-          name="description"
-          placeholder="Description (Optional)"
-        />
-        <FormBtn
-          disabled={!(this.state.name && this.state.price)}
-          onClick={this.handleFormSubmit}
-        >
-          Submit
-        </FormBtn>
-      </form>
+        <AdminList className='AdminList' />
+        <form className='Admin-Input'>
+          <Input
+            value={this.state.name}
+            onChange={this.handleInputChange}
+            name="name"
+            placeholder="Name (required)"
+          />
+          <Dropdown />
+          <br />
+          <br />
+          <Input
+            value={this.state.price}
+            onChange={this.handleInputChange}
+            name="price"
+            placeholder="Price (required)"
+          />
+          <TextArea
+            className="textArea"
+            value={this.state.description}
+            onChange={this.handleInputChange}
+            name="description"
+            placeholder="Description (Optional)"
+          />
+          <FormBtn
+            disabled={!(this.state.name && this.state.price)}
+            onClick={this.handleFormSubmit}
+          >
+            Submit
+          </FormBtn>
+        </form>
       </div>
       <Footer>
         <span>Copyright 2019</span>
