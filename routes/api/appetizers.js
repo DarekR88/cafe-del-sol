@@ -2,7 +2,7 @@ const router = require("express").Router();
 const appetizerController = require("../../controllers/appetizerController");
 
 router.route("/")
-    .get(appetizerController.findall)
+    .get(appetizerController.findAll)
     .post(appetizerController.create);
 
 router.route("/:id")
