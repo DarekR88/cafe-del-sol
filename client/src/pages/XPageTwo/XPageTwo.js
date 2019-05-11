@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { XComponentOne, XComponentTwo } from '../../components/XComponent';
+// import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { AdminList } from '../../components/AdminList';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
@@ -36,8 +36,6 @@ class XPageTwo extends Component {
       <Link to={"/"}>
         <strong>Go to XPageOne</strong>
       </Link>
-      {/* <XComponentOne array={this.state.array} string={this.state.string} />
-      <XComponentTwo array={this.state.array} string={this.state.string} /> */}
       <br />
       <div className='PageTwoDiv'>
         <AdminList className='AdminList' />
