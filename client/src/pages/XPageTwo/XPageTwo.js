@@ -5,6 +5,7 @@ import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { AdminList } from '../../components/AdminList';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
+import { Dropdown } from '../../components/Dropdown';
 import './XPageTwo.css';
 
 class XPageTwo extends Component {
@@ -47,6 +48,9 @@ class XPageTwo extends Component {
           name="name"
           placeholder="Name (required)"
         />
+        <Dropdown />
+        <br />
+        <br />
         <Input
           value={this.state.price}
           onChange={this.handleInputChange}
