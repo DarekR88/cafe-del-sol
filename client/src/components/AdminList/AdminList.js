@@ -86,9 +86,15 @@ class AdminList extends React.Component {
             <Row>
               <Col sm="12">
                 <ul className='app-ul'>
-                  <li className='app-list'>One</li>
-                  <li className='app-list'>Two</li>
-                  <li className='app-list'>Three</li>
+                  {this.state.appItems.map(app => {
+                    return(
+                      <li>
+                        {app.name}
+                        {app.description}
+                        {app.price}
+                      </li>
+                    )
+                  })}
                 </ul>
               </Col>
             </Row>
