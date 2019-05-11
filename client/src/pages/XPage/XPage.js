@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
 import { Link } from 'react-router-dom';
-import { XComponentOne, XComponentTwo } from '../../components/XComponent'
+import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 
 class XPage extends Component {
   state = {

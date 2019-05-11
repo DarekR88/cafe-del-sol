@@ -1,20 +1,22 @@
 import axios from "axios";
 
 export default {
-  // Gets all Documents
-  getDocuments: function() {
-    return axios.get("/api/collectionName");
+  getLunch: function() {
+    return axios.get("/api/lunch");
   },
-  // Gets the Document with the given id
-  getDocument: function(id) {
-    return axios.get("/api/collectionName/" + id);
+  getDinner: function() {
+    return axios.get("/api/dinner");
   },
-  // Deletes the Document with the given id
-  deleteDocument: function(id) {
-    return axios.delete("/api/collectionName/" + id);
+  getAppetizers: function() {
+    return axios.get("/api/appetizers");
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/collectionName", bookData);
+  saveLunchItem: function(lunchItem) {
+    return axios.post("/api/lunch", lunchItem);
+  },
+  saveDinnerItem: function(dinnerItem) {
+    return axios.post("/api/dinner", dinnerItem);
+  },
+  saveAppetizerItem: function(appItem) {
+    return axios.post("/api/appetizers", appItem);
   }
 };
