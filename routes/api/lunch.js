@@ -2,7 +2,7 @@ const router = require("express").Router();
 const lunchController = require("../../controllers/lunchController");
 
 router.route("/")
-    .get(lunchController.findall)
+    .get(lunchController.findAll)
     .post(lunchController.create);
 
 router.route("/:id")
