@@ -15,12 +15,6 @@ class XPageTwo extends Component {
     image: '',
   };
 
-  // componentDidMount() {
-  //   API.getDocuments()
-  //     .then((res) => { console.log(res.data) })
-  //     .catch((err) => console.log(err));
-  // }
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({

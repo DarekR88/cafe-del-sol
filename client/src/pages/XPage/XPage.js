@@ -9,12 +9,6 @@ class XPage extends Component {
     string: 'XPageString',
   };
 
-  componentDidMount() {
-    API.getDocuments()
-      .then((res) => { console.log(res.data) })
-      .catch((err) => console.log(err));
-  }
-
   render() {
     return (<div>
       <Link to={"/XPageTwo"}>
