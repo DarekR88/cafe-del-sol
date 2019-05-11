@@ -19,6 +19,14 @@ class App extends Component {
           <Route exact path='/XCollection/:id' component={XCollection} />
           <Route component={XNoMatch} />
         </Switch>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </Router>
   }
