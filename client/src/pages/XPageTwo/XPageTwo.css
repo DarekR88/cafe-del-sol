@@ -1,0 +1,18 @@
+.Admin-Input, .AdminList {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.Admin-Input {
+  width: 600px;
+  height: 450px;
+  float: right;
+  margin-right: 10%;
+}
+
+.AdminList {
+  width: 450px;
+  height: 450px;
+  margin-left: 10%;
+  float: left;
+}
