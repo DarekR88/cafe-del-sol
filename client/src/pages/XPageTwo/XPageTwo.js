@@ -70,9 +70,9 @@ class XPageTwo extends Component {
           </FormBtn>
         </form>
       </div>
-      <Footer>
+      {/* <Footer>
         <span>Copyright 2019</span>
-      </Footer>
+      </Footer> */}
     </div>);
   }
 }
