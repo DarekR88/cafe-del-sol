@@ -75,4 +75,37 @@ const dinnerSeed = [
             }
         ]
     }
-]
+];
+
+db.Lunch
+    .remove({})
+    .then(() => db.Lunch.collection.insertMany(lunchSeed))
+    .then(data => {
+        console.log(data.result.n + " records inserted!")
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1)
+    })
+
+db.Dinner
+    .remove({})
+    .then(() => db.Dinner.collection.insertMany(dinnerSeed))
+    .then(data => {
+        console.log(data.result.n + " records inserted!")
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1)
+    })
+
+db.Appetizers
+    .remove({})
+    .then(() => db.Appetizers.collection.insertMany(appetizerSeed))
+    .then(data => {
+        console.log(data.result.n + " records inserted!")
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1)
+    })
