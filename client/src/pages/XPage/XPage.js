@@ -3,6 +3,7 @@ import API from '../../utils/API';
 import { Link } from 'react-router-dom';
 // import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { Footer } from '../../components/Footer';
+import { FoodImg, Description } from '../../components/Description'
 
 class XPage extends Component {
   state = {
@@ -24,6 +25,11 @@ class XPage extends Component {
       <Link to={"/XPageTwo"}>
         <strong>Go to XPageTwo</strong>
       </Link>
+      <div>
+        <FoodImg className='food-img' />
+        <Description className='descr-box'>
+        </Description>
+      </div>
       <Footer>
         <span>Footer Content/Admin Login</span>
       </Footer>
