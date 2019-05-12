@@ -6,8 +6,10 @@ export default class Dropdown extends React.Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.select = this.select.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      value: 'Select'
     };
   }
 
@@ -17,16 +19,28 @@ export default class Dropdown extends React.Component {
     });
   }
 
+  select(event) {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen,
+      value: event.target.innerText
+    });
+  }
+
   render() {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret size="sm">
-          Select
+          <span
+          onClick={this.toggle}
+          data-toggle='dropdown'
+          aria-haspopup='true'
+          aria-expanded={this.state.dropdownOpen}
+          >{this.state.value}</span>
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Appetizer</DropdownItem>
-          <DropdownItem>Lunch</DropdownItem>
-          <DropdownItem>Dinner</DropdownItem>
+          <DropdownItem onClick={this.select}>Appetizer</DropdownItem>
+          <DropdownItem onClick={this.select}>Lunch</DropdownItem>
+          <DropdownItem onClick={this.select}>Dinner</DropdownItem>
         </DropdownMenu>
       </ButtonDropdown>
     );

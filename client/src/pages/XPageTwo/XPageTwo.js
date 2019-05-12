@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { XComponentOne, XComponentTwo } from '../../components/XComponent';
+// import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { AdminList } from '../../components/AdminList';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
@@ -36,45 +36,43 @@ class XPageTwo extends Component {
       <Link to={"/"}>
         <strong>Go to XPageOne</strong>
       </Link>
-      {/* <XComponentOne array={this.state.array} string={this.state.string} />
-      <XComponentTwo array={this.state.array} string={this.state.string} /> */}
       <br />
       <div className='PageTwoDiv'>
-      <AdminList className='AdminList' />
-      <form className='Admin-Input'>
-        <Input
-          value={this.state.name}
-          onChange={this.handleInputChange}
-          name="name"
-          placeholder="Name (required)"
-        />
-        <Dropdown />
-        <br />
-        <br />
-        <Input
-          value={this.state.price}
-          onChange={this.handleInputChange}
-          name="price"
-          placeholder="Price (required)"
-        />
-        <TextArea
-          className="textArea"
-          value={this.state.description}
-          onChange={this.handleInputChange}
-          name="description"
-          placeholder="Description (Optional)"
-        />
-        <FormBtn
-          disabled={!(this.state.name && this.state.price)}
-          onClick={this.handleFormSubmit}
-        >
-          Submit
-        </FormBtn>
-      </form>
+        <AdminList className='AdminList' />
+        <form className='Admin-Input'>
+          <Input
+            value={this.state.name}
+            onChange={this.handleInputChange}
+            name="name"
+            placeholder="Name (required)"
+          />
+          <Dropdown />
+          <br />
+          <br />
+          <Input
+            value={this.state.price}
+            onChange={this.handleInputChange}
+            name="price"
+            placeholder="Price (required)"
+          />
+          <TextArea
+            className="textArea"
+            value={this.state.description}
+            onChange={this.handleInputChange}
+            name="description"
+            placeholder="Description (Optional)"
+          />
+          <FormBtn
+            disabled={!(this.state.name && this.state.price)}
+            onClick={this.handleFormSubmit}
+          >
+            Submit
+          </FormBtn>
+        </form>
       </div>
-      <Footer>
+      {/* <Footer>
         <span>Copyright 2019</span>
-      </Footer>
+      </Footer> */}
     </div>);
   }
 }
