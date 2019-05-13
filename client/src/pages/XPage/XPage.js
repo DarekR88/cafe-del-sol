@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { Footer } from '../../components/Footer';
 import { FoodImg, Description } from '../../components/Description'
+import { AdminLogin } from '../../components/Modal';
 
 class XPage extends Component {
   state = {
@@ -31,7 +32,7 @@ class XPage extends Component {
         </Description>
       </div>
       <Footer>
-        <span>Footer Content/Admin Login</span>
+        <AdminLogin />
       </Footer>
     </div>
     );
