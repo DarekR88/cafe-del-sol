@@ -20,12 +20,12 @@ export default {
     return axios.post("/api/appetizers", appItem);
   },
   deleteLunch: function(id) {
-    return axios.delete("/api/lunch/" + id)
+    return axios.delete("/api/lunch/")
   },
   deleteDinner: function(id) {
-    return axios.delete("/api/dinner/" + id)
+    return axios.delete("/api/dinner/")
   },
   deleteAppetizer: function(id) {
-    return axios.delete("/api/appetizers/" + id)
+    return axios.delete("/api/appetizers/")
   }
 };

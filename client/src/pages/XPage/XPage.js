@@ -3,19 +3,34 @@ import API from '../../utils/API';
 import { Link } from 'react-router-dom';
 // import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { Footer } from '../../components/Footer';
+import { AdminList } from '../../components/AdminList';
 
 class XPage extends Component {
-  state = {
-    array: ['X', 'Page', 'Array'],
-    string: 'XPageString',
-  };
 
+  
+  componentDidMount() {
+    this.loadLunch()
+    this.loadDinner()
+    this.loadApps()
+  }
 
-  // componentDidMount() {
-  //   API.getDocuments()
-  //     .then((res) => { console.log(res.data) })
-  //     .catch((err) => console.log(err));
-  // }
+  loadLunch() {
+    API.getLunch()
+      .then(res => this.setState({ lunchItems: res.data[0].items }))
+      .catch(err => console.log(err))
+  }
+
+  loadApps() {
+    API.getAppetizers()
+      .then(res => this.setState({ appItems: res.data[0].items }))
+      .catch(err => console.log(err))
+  }
+
+  loadDinner() {
+    API.getDinner()
+      .then(res => this.setState({ dinnerItems: res.data[0].items }))
+      .catch(err => console.log(err))
+  }
 
 
   render() {

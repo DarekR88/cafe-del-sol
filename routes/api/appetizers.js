@@ -5,7 +5,7 @@ router.route("/")
     .get(appetizerController.findAll)
     .post(appetizerController.create);
 
-router.route("/:id")
+router.route("/appetizers")
     .put(appetizerController.update)
     .delete(appetizerController.remove);
     
