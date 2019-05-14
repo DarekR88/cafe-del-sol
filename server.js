@@ -55,6 +55,7 @@ db.on("error", (error) => {
 
 // Logs success if sucessfully connected to db
 db.once("open", () => {
+  require('./scripts/seedDB.js');
 	console.log("DB connection successful!");
 });
 

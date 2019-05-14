@@ -8,7 +8,11 @@ import { AdminLogin } from '../../components/Modal';
 import { AdminList } from '../../components/AdminList';
 
 class XPage extends Component {
+  // Setting our component's initial state
 
+  state = {
+    
+  }
   
   componentDidMount() {
     this.loadLunch()
