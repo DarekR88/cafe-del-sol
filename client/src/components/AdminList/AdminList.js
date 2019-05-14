@@ -21,7 +21,7 @@ class AdminList extends React.Component {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab
-      }); 
+      });
     }
   }
 
@@ -33,19 +33,19 @@ class AdminList extends React.Component {
 
   loadLunch() {
     API.getLunch()
-      .then(res => this.setState({lunchItems: res.data[0].items}))
+      .then(res => this.setState({ lunchItems: res.data[0].items }))
       .catch(err => console.log(err))
   }
 
-  loadApps(){
+  loadApps() {
     API.getAppetizers()
-      .then(res => this.setState({appItems: res.data[0].items}))
+      .then(res => this.setState({ appItems: res.data[0].items }))
       .catch(err => console.log(err))
   }
 
   loadDinner() {
     API.getDinner()
-      .then(res => this.setState({dinnerItems: res.data[0].items}))
+      .then(res => this.setState({ dinnerItems: res.data[0].items }))
       .catch(err => console.log(err))
   }
 
@@ -87,11 +87,11 @@ class AdminList extends React.Component {
               <Col sm="12">
                 <ul className='app-ul'>
                   {this.state.appItems.map(app => {
-                    return(
+                    return (
                       <li>
-                        {app.name}
-                        {app.description}
-                        {app.price}
+                        <p>{app.name}</p>
+                        <p>{app.description}</p>
+                        <p>{app.price}</p>
                       </li>
                     )
                   })}
@@ -106,9 +106,15 @@ class AdminList extends React.Component {
             <Row>
               <Col sm="12">
                 <ul className='lunch-ul'>
-                  <li className='lunch-list'>two</li>
-                  <li className='lunch-list'>Two</li>
-                  <li className='lunch-list'>Three</li>
+                  {this.state.lunchItems.map(lunch => {
+                    return (
+                      <li>
+                        <p>{lunch.name}</p>
+                        <p>{lunch.description}</p>
+                        <p>{lunch.price}</p>
+                      </li>
+                    )
+                  })}
                 </ul>
               </Col>
             </Row>
@@ -120,9 +126,15 @@ class AdminList extends React.Component {
             <Row>
               <Col sm="12">
                 <ul className='dinner-ul'>
-                  <li className='dinner-list'>three</li>
-                  <li className='dinner-list'>Two</li>
-                  <li className='dinner-list'>Three</li>
+                  {this.state.dinnerItems.map(dinner => {
+                    return (
+                      <li>
+                        <p>{dinner.name}</p>
+                        <p>{dinner.description}</p>
+                        <p>{dinner.price}</p>
+                      </li>
+                    )
+                  })}
                 </ul>
               </Col>
             </Row>
