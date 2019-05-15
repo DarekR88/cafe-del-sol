@@ -5,13 +5,28 @@ class AdminLogin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      email: '',
+      password: '',
+      redirect: false
     };
 
     this.toggle = this.toggle.bind(this);
   }
 
+  handleInputChange = event => {
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  }
+
   toggle() {
+    // if(this.state.email === 'CafeDelSol@coldmail.com' && this.state.password === 'abc123') {
+
+    // }
     this.setState(prevState => ({
       modal: !prevState.modal
     }));
@@ -30,13 +45,13 @@ class AdminLogin extends React.Component {
                 <Col md={6}>
                   <FormGroup>
                     <Label for="exampleEmail">Email</Label>
-                    <Input type="email" name="email" id="exampleEmail" placeholder="username@email.com" />
+                    <Input type="email" name="email" id="exampleEmail" placeholder="username@email.com" value={this.state.email} onChange={this.handleInputChange} />
                   </FormGroup>
                 </Col>
                 <Col md={6}>
                   <FormGroup>
                     <Label for="examplePassword">Password</Label>
-                    <Input type="password" name="password" id="examplePassword" placeholder="password" />
+                    <Input type="password" name="password" id="examplePassword" placeholder="password" value={this.state.password} onChange={this.handleInputChange} />
                   </FormGroup>
                 </Col>
               </Row>

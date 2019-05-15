@@ -54,10 +54,6 @@ class XPageTwo extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.name && this.state.price) {
-      console.log(this.state.name)
-      console.log(this.state.description)
-      console.log(this.state.price)
-      console.log(this.state.section)
       // Need logic for if the Item they are adding is for Appetizer/Lunch/Dinner
       if (this.state.section === "appetizer") {
         let appArray = this.state.appItems
