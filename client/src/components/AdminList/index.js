@@ -1,7 +1,8 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Card, CardBody } from 'reactstrap';
 import classnames from 'classnames';
-import API from "../../utils/API"
+import API from "../../utils/API";
+import './AdminList.css';
 
 class AdminList extends React.Component {
   constructor(props) {
@@ -85,17 +86,19 @@ class AdminList extends React.Component {
           <TabPane tabId="1">
             <Row>
               <Col sm="12">
-                <ul className='app-ul'>
-                  {this.state.appItems.map(app => {
-                    return (
-                      <li>
-                        <p>{app.name}</p>
-                        <p>{app.description}</p>
-                        <p>{app.price}</p>
-                      </li>
-                    )
-                  })}
-                </ul>
+                <div className='app.cont'>
+                  <ul className='app-ul'>
+                    {this.state.appItems.map(app => {
+                      return (
+                        <li>
+                          <p>{app.name}</p>
+                          <p>{app.description}</p>
+                          <p>{app.price}</p>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
               </Col>
             </Row>
           </TabPane>
@@ -105,17 +108,21 @@ class AdminList extends React.Component {
           <TabPane tabId="2">
             <Row>
               <Col sm="12">
-                <ul className='lunch-ul'>
-                  {this.state.lunchItems.map(lunch => {
-                    return (
-                      <li>
-                        <p>{lunch.name}</p>
-                        <p>{lunch.description}</p>
-                        <p>{lunch.price}</p>
-                      </li>
-                    )
-                  })}
-                </ul>
+                <Card>
+                  <CardBody>
+                    <ul className='lunch-ul'>
+                      {this.state.lunchItems.map(lunch => {
+                        return (
+                          <li>
+                            <p>{lunch.name}</p>
+                            <p>{lunch.description}</p>
+                            <p>{lunch.price}</p>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </CardBody>
+                </Card>
               </Col>
             </Row>
           </TabPane>
@@ -125,6 +132,7 @@ class AdminList extends React.Component {
           <TabPane tabId="3">
             <Row>
               <Col sm="12">
+              
                 <ul className='dinner-ul'>
                   {this.state.dinnerItems.map(dinner => {
                     return (

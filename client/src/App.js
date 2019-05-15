@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import XPage from './pages/XPage';
-import XPageTwo from './pages/XPageTwo'
+import FrontPage from './pages/Front';
+import AdminPage from './pages/Admin'
 import XCollection from './pages/XCollection'
-import XNoMatch from './pages/XNoMatch';
-import { XNav } from './components/XNav';
+import NoMatch from './pages/NoMatch';
+import { Nav } from './components/Nav';
 import { Logo } from './components/Jumbotron';
 
 class App extends Component {
   render() {
     return <Router forceRefresh={!'pushState' in window.history}>
       <div>
-        {/* <XNav /> */}
+        {/* <Nav /> */}
         <Logo />
         <Switch>
-          <Route exact path='/' component={XPage} />
-          <Route exact path='/XPageTwo' component={XPageTwo} />
+          <Route exact path='/' component={FrontPage} />
+          <Route exact path='/AdminPage' component={AdminPage} />
           <Route exact path='/XCollection/:id' component={XCollection} />
-          <Route component={XNoMatch} />
+          <Route component={NoMatch} />
         </Switch>
         <br />
         <br />

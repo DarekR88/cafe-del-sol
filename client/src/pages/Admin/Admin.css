@@ -1,10 +1,12 @@
-.Admin-Input, .AdminList {
+/* .Admin-Input, .AdminList {
   border: 1px solid black;
   padding: 10px;
   margin-bottom: 30px;
-}
+  word-wrap: break-word;
+  overflow-x: scroll;
+} */
 
-.Admin-Input {
+/* .Admin-Input {
   width: 650px;
   height: 450px;
   float: right;
@@ -16,7 +18,7 @@
   height: 450px;
   margin-left: 10%;
   float: left;
-}
+} */
 
 .textArea {
   resize: none;

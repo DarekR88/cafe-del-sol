@@ -1,5 +1,5 @@
 import React from 'react';
-import './XNav.css';
+import './Nav.css';
 
 // The ...props means, spread all of the passed props onto this element
 // That way we don't have to define them all individually
@@ -18,13 +18,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink, } from 'reactstrap';
 
-export default class XNav extends React.Component {
+export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -47,28 +43,11 @@ export default class XNav extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="/AdminPage">Admin Login</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
@@ -77,4 +56,4 @@ export default class XNav extends React.Component {
   }
 }
 
-export { XNav };
+export { NavBar };

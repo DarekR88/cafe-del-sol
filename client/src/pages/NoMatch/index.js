@@ -1,7 +1,7 @@
 import React from "react";
 
-const XNoMatch = () => (
+const NoMatch = () => (
   <h1>404 Page Not Found</h1>
 );
 
-export default XNoMatch;
+export default NoMatch;
