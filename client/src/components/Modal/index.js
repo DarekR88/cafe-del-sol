@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
+import { BrowserRouter } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 class AdminLogin extends React.Component {
   constructor(props) {
@@ -7,8 +9,7 @@ class AdminLogin extends React.Component {
     this.state = {
       modal: false,
       email: '',
-      password: '',
-      redirect: false
+      password: ''
     };
 
     this.toggle = this.toggle.bind(this);
@@ -24,12 +25,12 @@ class AdminLogin extends React.Component {
   }
 
   toggle() {
-    // if(this.state.email === 'CafeDelSol@coldmail.com' && this.state.password === 'abc123') {
-
-    // }
     this.setState(prevState => ({
       modal: !prevState.modal
     }));
+    if (this.state.email === "Cafedelsol@coldmail.com" && this.state.password === 'abc123') {
+      this.props.history.push('/XPageTwo')
+    }
   }
 
   render() {
@@ -67,4 +68,4 @@ class AdminLogin extends React.Component {
   }
 }
 
-export { AdminLogin };
+export default withRouter(AdminLogin)

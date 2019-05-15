@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { Footer } from '../../components/Footer';
 import { FoodImg, Description } from '../../components/Description'
-import { AdminLogin } from '../../components/Modal';
+import  AdminLogin  from '../../components/Modal';
 import { AdminList } from '../../components/AdminList';
 
 class XPage extends Component {
