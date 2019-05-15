@@ -3,10 +3,16 @@ import API from '../../utils/API';
 import { Link } from 'react-router-dom';
 // import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { Footer } from '../../components/Footer';
+import { FoodImg, Description } from '../../components/Description'
+import { AdminLogin } from '../../components/Modal';
 import { AdminList } from '../../components/AdminList';
 
 class XPage extends Component {
+  // Setting our component's initial state
 
+  state = {
+    
+  }
   
   componentDidMount() {
     this.loadLunch()
@@ -39,8 +45,13 @@ class XPage extends Component {
       <Link to={"/XPageTwo"}>
         <strong>Go to XPageTwo</strong>
       </Link>
+      <div>
+        <FoodImg className='food-img' />
+        <Description className='descr-box'>
+        </Description>
+      </div>
       <Footer>
-        <span>Footer Content/Admin Login</span>
+        <AdminLogin />
       </Footer>
     </div>
     );
