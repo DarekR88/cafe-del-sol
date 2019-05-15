@@ -3,7 +3,8 @@ const appetizerController = require("../../controllers/appetizerController");
 
 router.route("/")
     .get(appetizerController.findAll)
-    .post(appetizerController.create);
+    .post(appetizerController.create)
+    .put(appetizerController.update)
 
 router.route("/appetizers")
     .put(appetizerController.update)

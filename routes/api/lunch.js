@@ -3,9 +3,10 @@ const lunchController = require("../../controllers/lunchController");
 
 router.route("/")
     .get(lunchController.findAll)
-    .post(lunchController.create);
+    .post(lunchController.create)
+    .put(lunchController.update);
 
-router.route("/:id")
+router.route("/lunch")
     .put(lunchController.update)
     .delete(lunchController.remove);
 

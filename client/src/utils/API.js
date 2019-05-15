@@ -19,13 +19,13 @@ export default {
   saveAppetizerItem: function(appItem) {
     return axios.post("/api/appetizers", appItem);
   },
-  deleteLunch: function(id) {
-    return axios.delete("/api/lunch/")
+  updateApps: function(appItem) {
+    return axios.put("/api/appetizers", appItem)
   },
-  deleteDinner: function(id) {
-    return axios.delete("/api/dinner/")
+  updateLunch: function (lunchItem) {
+    return axios.put("api/lunch", lunchItem);
   },
-  deleteAppetizer: function(id) {
-    return axios.delete("/api/appetizers/")
+  updateDinner: function (dinnerItem) {
+    return axios.put("api/dinner", dinnerItem)
   }
 };
