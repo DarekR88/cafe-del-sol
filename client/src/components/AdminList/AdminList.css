@@ -1,0 +1,5 @@
+.app-cont, .lunch-cont, .dinner-cont {
+  margin: 10px;
+  word-wrap: break-word;
+  overflow-x: scroll;
+}
