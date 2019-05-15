@@ -226,7 +226,7 @@ class XPageTwo extends Component {
                 <Row>
                   <Col sm="12">
                     <ul className='dinner-ul'>
-                      {this.state.lunchItems.map((dinner, i) => {
+                      {this.state.dinnerItems.map((dinner, i) => {
                         return (
                           <li key={i}>
                             <p>{dinner.name}</p>
