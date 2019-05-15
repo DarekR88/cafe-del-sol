@@ -14,7 +14,7 @@ module.exports = {
     },
     update: function (req, res) {
         db.Appetizers
-            .findOneAndUpdate({ title: "appetizers" }, req.body)
+            .findOneAndUpdate({ title: "Appetizers" }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },

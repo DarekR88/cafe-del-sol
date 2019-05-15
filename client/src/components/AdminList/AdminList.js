@@ -49,7 +49,7 @@ class AdminList extends React.Component {
       .catch(err => console.log(err))
   }
 
-  render() {
+  render(props) {
     return (
       <div className='AdminList'>
         <Nav tabs>
@@ -86,12 +86,13 @@ class AdminList extends React.Component {
             <Row>
               <Col sm="12">
                 <ul className='app-ul'>
-                  {this.state.appItems.map(app => {
+                  {this.props.appList.map((app, i) => {
                     return (
-                      <li>
+                      <li key={i}>
                         <p>{app.name}</p>
                         <p>{app.description}</p>
                         <p>{app.price}</p>
+                        <button>Delete item</button>
                       </li>
                     )
                   })}
@@ -106,12 +107,13 @@ class AdminList extends React.Component {
             <Row>
               <Col sm="12">
                 <ul className='lunch-ul'>
-                  {this.state.lunchItems.map(lunch => {
+                  {this.props.lunchList.map((lunch, i) => {
                     return (
-                      <li>
+                      <li key={i}>
                         <p>{lunch.name}</p>
                         <p>{lunch.description}</p>
                         <p>{lunch.price}</p>
+                        <button>Delete item</button>
                       </li>
                     )
                   })}
@@ -126,12 +128,13 @@ class AdminList extends React.Component {
             <Row>
               <Col sm="12">
                 <ul className='dinner-ul'>
-                  {this.state.dinnerItems.map(dinner => {
+                  {this.props.dinnerList.map((dinner, i) => {
                     return (
-                      <li>
+                      <li key={i}>
                         <p>{dinner.name}</p>
                         <p>{dinner.description}</p>
                         <p>{dinner.price}</p>
+                        <button>Delete item</button>
                       </li>
                     )
                   })}
