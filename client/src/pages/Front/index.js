@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
 import { Link } from 'react-router-dom';
-// import { XComponentOne, XComponentTwo } from '../../components/XComponent';
 import { Footer } from '../../components/Footer';
-import { FoodImg, Description } from '../../components/Description'
+import { Description } from '../../components/Description'
 import { AdminLogin } from '../../components/Modal';
 import { AdminList } from '../../components/AdminList';
 
-class XPage extends Component {
+class FrontPage extends Component {
   // Setting our component's initial state
 
   state = {
@@ -42,13 +41,8 @@ class XPage extends Component {
   render() {
     return (
     <div>
-      <Link to={"/XPageTwo"}>
-        <strong>Go to XPageTwo</strong>
-      </Link>
       <div>
-        <FoodImg className='food-img' />
-        <Description className='descr-box'>
-        </Description>
+        <Description />
       </div>
       <Footer>
         <AdminLogin />
@@ -58,4 +52,4 @@ class XPage extends Component {
   }
 }
 
-export default XPage;
+export default FrontPage;
