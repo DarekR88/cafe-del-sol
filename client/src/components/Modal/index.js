@@ -29,7 +29,7 @@ class AdminLogin extends React.Component {
       modal: !prevState.modal
     }));
     if (this.state.email === "Cafedelsol@coldmail.com" && this.state.password === 'abc123') {
-      this.props.history.push('/XPageTwo')
+      this.props.history.push('/AdminPage')
     }
   }
 
@@ -68,4 +68,4 @@ class AdminLogin extends React.Component {
   }
 }
 
-export default withRouter(AdminLogin)
+export default withRouter(AdminLogin);
