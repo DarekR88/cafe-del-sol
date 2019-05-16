@@ -142,7 +142,7 @@ class AdminPage extends Component {
     return (
       <Container>
         <Row>
-          <Col xs='4'>
+          <Col sm='6'>
           <AdminList className='AdminList' />
           </Col>
 

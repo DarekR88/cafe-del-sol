@@ -1,27 +1,15 @@
-/* .Admin-Input, .AdminList {
+.Admin-Input {
+  height: 600px;
+  margin-right: 10px;
   border: 1px solid black;
   padding: 10px;
   margin-bottom: 30px;
-  word-wrap: break-word;
-  overflow-x: scroll;
-} */
-
-/* .Admin-Input {
-  width: 650px;
-  height: 450px;
-  float: right;
-  margin-right: 10%;
 }
-
-.AdminList {
-  width: 450px;
-  height: 450px;
-  margin-left: 10%;
-  float: left;
-} */
 
 .textArea {
   resize: none;
   height: 250px;
-  width: 630px;
+  width: 500px;
+  overflow-x: scroll;
+  word-wrap: break-word;
 }

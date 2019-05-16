@@ -86,19 +86,22 @@ class AdminList extends React.Component {
           <TabPane tabId="1">
             <Row>
               <Col sm="12">
-                <div className='app.cont'>
-                  <ul className='app-ul'>
-                    {this.state.appItems.map(app => {
-                      return (
-                        <li>
-                          <p>{app.name}</p>
-                          <p>{app.description}</p>
-                          <p>{app.price}</p>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
+                <Card>
+                  <CardBody>
+                    <ul className='app-ul'>
+                      {this.state.appItems.map((app, i) => {
+                        return (
+                          <li key={i}>
+                            <p>{app.name}</p>
+                            <p>{app.description}</p>
+                            <p>{app.price}</p>
+                            <button onClick={() => this.deleteItem(app.name)}>Delete item</button>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </CardBody>
+                </Card>
               </Col>
             </Row>
           </TabPane>
@@ -111,12 +114,13 @@ class AdminList extends React.Component {
                 <Card>
                   <CardBody>
                     <ul className='lunch-ul'>
-                      {this.state.lunchItems.map(lunch => {
+                      {this.state.appItems.map((lunch, i) => {
                         return (
-                          <li>
+                          <li key={i}>
                             <p>{lunch.name}</p>
                             <p>{lunch.description}</p>
                             <p>{lunch.price}</p>
+                            <button onClick={() => this.deleteItem(lunch.name)}>Delete item</button>
                           </li>
                         )
                       })}
@@ -132,18 +136,22 @@ class AdminList extends React.Component {
           <TabPane tabId="3">
             <Row>
               <Col sm="12">
-              
-                <ul className='dinner-ul'>
-                  {this.state.dinnerItems.map(dinner => {
-                    return (
-                      <li>
-                        <p>{dinner.name}</p>
-                        <p>{dinner.description}</p>
-                        <p>{dinner.price}</p>
-                      </li>
-                    )
-                  })}
-                </ul>
+                <Card>
+                  <CardBody>
+                    <ul className='lunch-ul'>
+                      {this.state.appItems.map((dinner, i) => {
+                        return (
+                          <li key={i}>
+                            <p>{dinner.name}</p>
+                            <p>{dinner.description}</p>
+                            <p>{dinner.price}</p>
+                            <button onClick={() => this.deleteItem(dinner.name)}>Delete item</button>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </CardBody>
+                </Card>
               </Col>
             </Row>
           </TabPane>
