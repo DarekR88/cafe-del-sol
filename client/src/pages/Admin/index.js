@@ -124,19 +124,34 @@ class AdminPage extends Component {
 
   loadLunch() {
     API.getLunch()
-      .then(res => this.setState({ lunchItems: res.data[0].items }))
+      .then(res => this.setState({ 
+        lunchItems: res.data[0].items,
+        name: '',
+        description: '',
+        price: '' 
+      }))
       .catch(err => console.log(err))
   }
 
   loadApps() {
     API.getAppetizers()
-      .then(res => this.setState({ appItems: res.data[0].items }))
+      .then(res => this.setState({ 
+        appItems: res.data[0].items,
+        name: '',
+        description: '',
+        price: ''  
+      }))
       .catch(err => console.log(err))
   }
 
   loadDinner() {
     API.getDinner()
-      .then(res => this.setState({ dinnerItems: res.data[0].items }))
+      .then(res => this.setState({ 
+        dinnerItems: res.data[0].items,
+        name: '',
+        description: '',
+        price: ''  
+      }))
       .catch(err => console.log(err))
   }
 
