@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Col, Row, UncontrolledCarousel } from 'reactstrap';
-import { AdminList } from '../AdminList';
+import { MenuList } from '../Menu';
 
 const foodImg = [
   {
@@ -42,7 +42,7 @@ const Description = (props) => {
       </Row>
       <Row>
         <Col sm="12" md={{ size: 6, offset: 3 }}>
-          <AdminList />
+          <MenuList />
         </Col>
       </Row>
     </Container>

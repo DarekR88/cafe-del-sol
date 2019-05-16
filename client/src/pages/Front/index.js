@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Footer } from '../../components/Footer';
 import { Description } from '../../components/Description'
 import AdminLogin from '../../components/Modal';
-import { AdminList } from '../../components/AdminList';
 
 class FrontPage extends Component {
   // Setting our component's initial state

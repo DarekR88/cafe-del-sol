@@ -2,9 +2,8 @@ import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Card, CardBody } from 'reactstrap';
 import classnames from 'classnames';
 import API from "../../utils/API";
-import './AdminList.css';
 
-class AdminList extends React.Component {
+class MenuList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -52,7 +51,7 @@ class AdminList extends React.Component {
 
   render() {
     return (
-      <div className='AdminList'>
+      <div className='MenuList'>
         <Nav tabs>
           <NavItem>
             <NavLink
@@ -95,7 +94,6 @@ class AdminList extends React.Component {
                             <p>{app.name}</p>
                             <p>{app.description}</p>
                             <p>{app.price}</p>
-                            <button onClick={() => this.deleteItem(app.name)}>Delete item</button>
                           </li>
                         )
                       })}
@@ -120,7 +118,6 @@ class AdminList extends React.Component {
                             <p>{lunch.name}</p>
                             <p>{lunch.description}</p>
                             <p>{lunch.price}</p>
-                            <button onClick={() => this.deleteItem(lunch.name)}>Delete item</button>
                           </li>
                         )
                       })}
@@ -145,7 +142,6 @@ class AdminList extends React.Component {
                             <p>{dinner.name}</p>
                             <p>{dinner.description}</p>
                             <p>{dinner.price}</p>
-                            <button onClick={() => this.deleteItem(dinner.name)}>Delete item</button>
                           </li>
                         )
                       })}
@@ -161,4 +157,4 @@ class AdminList extends React.Component {
   }
 }
 
-export { AdminList };
+export { MenuList };
