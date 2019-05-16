@@ -93,7 +93,7 @@ class MenuList extends React.Component {
                           <li key={i}>
                             <p>{app.name}</p>
                             <p>{app.description}</p>
-                            <p>{app.price}</p>
+                            <p>${app.price}</p>
                           </li>
                         )
                       })}
@@ -117,7 +117,7 @@ class MenuList extends React.Component {
                           <li key={i}>
                             <p>{lunch.name}</p>
                             <p>{lunch.description}</p>
-                            <p>{lunch.price}</p>
+                            <p>${lunch.price}</p>
                           </li>
                         )
                       })}
@@ -141,7 +141,7 @@ class MenuList extends React.Component {
                           <li key={i}>
                             <p>{dinner.name}</p>
                             <p>{dinner.description}</p>
-                            <p>{dinner.price}</p>
+                            <p>${dinner.price}</p>
                           </li>
                         )
                       })}

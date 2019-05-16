@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-// import { AdminList } from '../../components/AdminList';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Container } from 'reactstrap';
 import classnames from 'classnames';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
@@ -185,7 +184,7 @@ class AdminPage extends Component {
                             <li key={i}>
                               <p>{app.name}</p>
                               <p>{app.description}</p>
-                              <p>{app.price}</p>
+                              <p>${app.price}</p>
                               <button onClick={() => this.deleteItem(app.name)}>Delete item</button>
                             </li>
                           )
@@ -206,7 +205,7 @@ class AdminPage extends Component {
                             <li key={i}>
                               <p>{lunch.name}</p>
                               <p>{lunch.description}</p>
-                              <p>{lunch.price}</p>
+                              <p>${lunch.price}</p>
                               <button onClick={() => this.deleteItem(lunch.name)}>Delete item</button>
                             </li>
                           )
@@ -227,7 +226,7 @@ class AdminPage extends Component {
                             <li key={i}>
                               <p>{dinner.name}</p>
                               <p>{dinner.description}</p>
-                              <p>{dinner.price}</p>
+                              <p>${dinner.price}</p>
                               <button onClick={() => this.deleteItem(dinner.name)}>Delete item</button>
                             </li>
                           )
