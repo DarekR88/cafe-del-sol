@@ -3,8 +3,7 @@ import API from '../../utils/API';
 import { Link } from 'react-router-dom';
 import { Footer } from '../../components/Footer';
 import { Description } from '../../components/Description'
-import { AdminLogin } from '../../components/Modal';
-import { AdminList } from '../../components/AdminList';
+import AdminLogin from '../../components/Modal';
 
 class FrontPage extends Component {
   // Setting our component's initial state
@@ -36,7 +35,6 @@ class FrontPage extends Component {
       .then(res => this.setState({ dinnerItems: res.data[0].items }))
       .catch(err => console.log(err))
   }
-
 
   render() {
     return (
