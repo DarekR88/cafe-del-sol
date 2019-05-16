@@ -10,6 +10,7 @@ import './Admin.css';
 class AdminPage extends Component {
   // Setting our component's initial state
   state = {
+    activeTab: '1',
     name: '',
     description: '',
     price: '',
@@ -19,6 +20,15 @@ class AdminPage extends Component {
     dinnerItems: [],
     appItems: []
   };
+
+  toggle(tab) {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+      console.log(this.state.activeTab)
+    }
+  }
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -34,27 +44,79 @@ class AdminPage extends Component {
   }
 
   handleSelect = (e) => {
-    this.setState({section: e.target.value})
+    this.setState({ section: e.target.value })
     console.log(this.state.section, e.target.value)
   }
 
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.name && this.state.price) {
-      console.log(this.state.name)
-      console.log(this.state.description)
-      console.log(this.state.price)
-      console.log(this.state.section)
       // Need logic for if the Item they are adding is for Appetizer/Lunch/Dinner
+      if (this.state.section === "appetizer") {
+        let appArray = this.state.appItems
+        appArray.push({
+          name: this.state.name,
+          description: this.state.description,
+          price: this.state.price
+        })
+        API.updateApps({
+          items: appArray
+        })
+          .then(res => this.loadApps())
+          .catch(err => console.log(err))
+      } else if (this.state.section === "dinner") {
+        let dinnerArray = this.state.dinnerItems
+        dinnerArray.push({
+          name: this.state.name,
+          description: this.state.description,
+          price: this.state.price
+        })
+        API.updateDinner({
+          items: dinnerArray
+        })
+          .then(res => this.loadDinner())
+          .catch(err => console.log(err))
+      } else if (this.state.section === "lunch") {
+        let lunchArray = this.state.lunchItems
+        lunchArray.push({
+          name: this.state.name,
+          description: this.state.description,
+          price: this.state.price
+        })
+        API.updateLunch({
+          items: lunchArray
+        })
+          .then(res => this.loadLunch())
+          .catch(err => console.log(err))
+      }
+    }
+  }
+
+  deleteItem = (item) => {
+    if(this.state.activeTab === '1') {
       let appArray = this.state.appItems
-      appArray.push({
-        name: this.state.name,
-        description: this.state.description,
-        price: this.state.price
+      const newArray = appArray.filter(meal => meal.name !== item)
+      API.updateApps({
+        items: newArray
       })
-      API.saveAppetizerItem({
-        
+        .then(res => this.loadApps())
+        .catch(err => console.log(err))
+    } else if (this.state.activeTab === '2') {
+      let lunchArray = this.state.lunchItems
+      const newArray = lunchArray.filter(meal => meal.name !== item)
+      API.updateLunch({
+        items: newArray
       })
+        .then(res => this.loadLunch())
+        .catch(err => console.log(err))
+    } else if (this.state.activeTab === '3') {
+      let dinnerArray = this.state.dinnerItems
+      const newArray = dinnerArray.filter(meal => meal.name !== item)
+      API.updateDinner({
+        items: newArray
+      })
+        .then(res => this.loadDinner())
+        .catch(err => console.log(err))
     }
   }
 
