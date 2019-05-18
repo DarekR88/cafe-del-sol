@@ -5,9 +5,8 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Container } from 
 import classnames from 'classnames';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
+import { NavBar } from '../../components/Nav';
 import './Admin.css';
-
-// WE JUST NEED THE NAVBAR WITH JUST HOME ON IT FOR THE ADMIN
 
 class AdminPage extends Component {
   // Setting our component's initial state
@@ -159,6 +158,7 @@ class AdminPage extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <Container>
           <Row>
             <Col sm='6'>

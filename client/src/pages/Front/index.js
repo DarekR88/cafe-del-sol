@@ -5,6 +5,7 @@ import { Footer } from '../../components/Footer';
 import { Description } from '../../components/Description'
 import AdminLogin from '../../components/Modal';
 import { Logo } from '../../components/Header';
+import { Special } from '../../components/Specials';
 
 class FrontPage extends Component {
   // Setting our component's initial state
@@ -43,6 +44,9 @@ class FrontPage extends Component {
       <div>
         <Logo />
         <Description />
+      </div>
+      <div>
+        <Special />
       </div>
       <Footer>
         <AdminLogin />
