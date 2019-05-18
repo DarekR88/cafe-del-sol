@@ -15,10 +15,6 @@ class App extends Component {
           <Route exact path='/XCollection/:id' component={XCollection} />
           <Route component={NoMatch} />
         </Switch>
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
     </Router>
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Card, CardBody } from 'reactstrap';
 import classnames from 'classnames';
+import './menu.css';
 import API from "../../utils/API";
 
 class MenuList extends React.Component {

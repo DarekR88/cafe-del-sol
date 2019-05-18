@@ -14,29 +14,6 @@ class FrontPage extends Component {
     
   }
   
-  componentDidMount() {
-    this.loadLunch()
-    this.loadDinner()
-    this.loadApps()
-  }
-
-  loadLunch() {
-    API.getLunch()
-      .then(res => this.setState({ lunchItems: res.data[0].items }))
-      .catch(err => console.log(err))
-  }
-
-  loadApps() {
-    API.getAppetizers()
-      .then(res => this.setState({ appItems: res.data[0].items }))
-      .catch(err => console.log(err))
-  }
-
-  loadDinner() {
-    API.getDinner()
-      .then(res => this.setState({ dinnerItems: res.data[0].items }))
-      .catch(err => console.log(err))
-  }
 
   render() {
     return (

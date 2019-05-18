@@ -80,7 +80,7 @@ const dinnerSeed = [
 const colorsSeed = [
     {
         title: "Seasonal",
-        backgroundColorOne: "gray",
+        backgroundColorOne: "white",
         backgroundColorTwo: "white",
         textColorOne: "black",
         textColorTwo: "black",
