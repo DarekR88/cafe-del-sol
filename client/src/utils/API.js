@@ -10,6 +10,9 @@ export default {
   getAppetizers: function() {
     return axios.get("/api/appetizers");
   },
+  getColors: function() {
+    return axios.get("/api/colors");
+  },
   saveLunchItem: function(lunchItem) {
     return axios.post("/api/lunch", lunchItem);
   },
@@ -27,5 +30,8 @@ export default {
   },
   updateDinner: function (dinnerItem) {
     return axios.put("api/dinner", dinnerItem)
+  },
+  updateColors: function (colorItem) {
+    return axios.put("api/colors", colorItem)
   }
 };
