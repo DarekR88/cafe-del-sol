@@ -19,7 +19,12 @@ class AdminPage extends Component {
     section: 'appetizer',
     lunchItems: [],
     dinnerItems: [],
-    appItems: []
+    appItems: [],
+    bColorOne: 'gray',
+    bColorTwo: 'white',
+    textColorOne: 'black',
+    textColorTwo: 'black',
+    deal: 'Two for one tacos on Tuesdays!'
   };
 
   toggle(tab) {
@@ -42,11 +47,27 @@ class AdminPage extends Component {
     this.loadLunch()
     this.loadDinner()
     this.loadApps()
+    this.loadColors()
   }
 
   handleSelect = (e) => {
     this.setState({ section: e.target.value })
-    console.log(this.state.section, e.target.value)
+  }
+
+  handleColorSelectOne = (e) => {
+    this.setState({ bColorOne: e.target.value })
+  }
+
+  handleColorSelectTwo = (e) => {
+    this.setState({ bColorTwo: e.target.value })
+  }
+
+  handleColorSelectThree = (e) => {
+    this.setState({ textColorOne: e.target.value })
+  }
+
+  handleColorSelectFour = (e) => {
+    this.setState({ textColorTwo: e.target.value })
   }
 
   handleFormSubmit = event => {
@@ -93,8 +114,21 @@ class AdminPage extends Component {
     }
   }
 
+  handleColorSubmit = event => {
+    event.preventDefault();
+    API.updateColors({
+      backgroundColorOne: this.state.bColorOne,
+      backgroundColorTwo: this.state.bColorTwo,
+      textColorOne: this.state.textColorOne,
+      textColorTwo: this.state.textColorTwo,
+      deal: this.state.deal
+    })
+      .then(res => this.loadColors())
+      .catch(err => console.log(err))
+  }
+
   deleteItem = (item) => {
-    if(this.state.activeTab === '1') {
+    if (this.state.activeTab === '1') {
       let appArray = this.state.appItems
       const newArray = appArray.filter(meal => meal.name !== item)
       API.updateApps({
@@ -123,38 +157,60 @@ class AdminPage extends Component {
 
   loadLunch() {
     API.getLunch()
-      .then(res => this.setState({ 
+      .then(res => this.setState({
         lunchItems: res.data[0].items,
         name: '',
         description: '',
-        price: '' 
+        price: ''
       }))
       .catch(err => console.log(err))
   }
 
   loadApps() {
     API.getAppetizers()
-      .then(res => this.setState({ 
+      .then(res => this.setState({
         appItems: res.data[0].items,
         name: '',
         description: '',
-        price: ''  
+        price: ''
       }))
       .catch(err => console.log(err))
   }
 
   loadDinner() {
     API.getDinner()
-      .then(res => this.setState({ 
+      .then(res => this.setState({
         dinnerItems: res.data[0].items,
         name: '',
         description: '',
-        price: ''  
+        price: ''
+      }))
+      .catch(err => console.log(err))
+  }
+
+  loadColors() {
+    API.getColors()
+      .then(res => this.setState({
+        bColorOne: res.data[0].backgroundColorOne,
+        bColorTwo: res.data[0].backgroundColorTwo,
+        textColorOne: res.data[0].textColorOne,
+        textColorTwo: res.data[0].textColorTwo,
+        deal: res.data[0].deal
       }))
       .catch(err => console.log(err))
   }
 
   render() {
+    const headerStyle = {
+      backgroundColor: this.state.bColorOne,
+      color: this.state.textColorOne
+    }
+
+    const bodyStyle = {
+      backgroundColor: this.state.bColorTwo,
+      color: this.state.textColorTwo
+    }
+
     return (
       <Container>
         <Row>
@@ -291,13 +347,87 @@ class AdminPage extends Component {
             </form>
           </Col>
         </Row>
+        <Row>
+          <Col sm='6'>
+            <div style={bodyStyle} className="preview">
+                <div style={headerStyle} className="previewHeader"><h4 className="previewTitle">Cafe Del Sol</h4></div>
+                <div style={bodyStyle} className="previewBody">{this.state.deal}</div>
+            </div>
+          </Col>
+
+          <Col sm='6'>
+            <form className='Admin-Input'>
+              <p>Background color 1</p>
+              <select value={this.state.bColorOne} onChange={this.handleColorSelectOne}>
+                <option value="gray">gray</option>
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="white">white</option>
+              </select>
+              <br />
+              <br />
+              <p>Background color 2</p>
+              <select value={this.state.bColorTwo} onChange={this.handleColorSelectTwo}>
+                <option value="gray">gray</option>
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="white">white</option>
+              </select>
+              <br />
+              <br />
+              <p>Text color 1</p>
+              <select value={this.state.textColorOne} onChange={this.handleColorSelectThree}>
+                <option value="gray">gray</option>
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="white">white</option>
+              </select>
+              <br />
+              <br />
+              <p>Text color 2</p>
+              <select value={this.state.textColorTwo} onChange={this.handleColorSelectFour}>
+                <option value="gray">gray</option>
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="white">white</option>
+              </select>
+              <br />
+              <br />
+              <p>Seasonal Deal</p>
+              <TextArea
+                className="dealText"
+                value={this.state.deal}
+                onChange={this.handleInputChange}
+                name="deal"
+                placeholder="Seasonal Deal"
+              />
+              <FormBtn
+                onClick={this.handleColorSubmit}
+              >
+                Submit
+            </FormBtn>
+            </form>
+          </Col>
+        </Row>
         <div>
           <Footer>
             <span>Copyright 2019</span>
           </Footer>
         </div>
       </Container>
-);
+    );
   }
 }
 

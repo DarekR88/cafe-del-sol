@@ -77,6 +77,17 @@ const dinnerSeed = [
     }
 ];
 
+const colorsSeed = [
+    {
+        title: "Seasonal",
+        backgroundColorOne: "gray",
+        backgroundColorTwo: "white",
+        textColorOne: "black",
+        textColorTwo: "black",
+        deal: "Two for one tacos on tuesdays!"
+    }
+]
+
 db.Lunch
     .remove({})
     .then(() => db.Lunch.collection.insertMany(lunchSeed))
@@ -102,6 +113,17 @@ db.Dinner
 db.Appetizers
     .remove({})
     .then(() => db.Appetizers.collection.insertMany(appetizerSeed))
+    .then(data => {
+        console.log(data.result.n + " records inserted!")
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1)
+    })
+
+db.Colors
+    .remove({})
+    .then(() => db.Colors.collection.insertMany(colorsSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!")
     })
