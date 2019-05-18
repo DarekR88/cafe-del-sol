@@ -18,7 +18,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink, } from 'reactstrap';
+  NavLink,
+  Button } from 'reactstrap';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -38,15 +39,14 @@ export default class NavBar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">cafe-del-sol</NavbarBrand>
+          <NavbarBrand href="/"></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/AdminPage">Admin Login</NavLink>
+                <NavLink href="/">
+                  <Button color="info">Return To Home</Button>
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

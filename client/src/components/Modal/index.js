@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import { BrowserRouter } from 'react-router-dom';
 import { withRouter } from 'react-router';
+import './Modal.css';
 
 class AdminLogin extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class AdminLogin extends React.Component {
   render() {
     return (
       <div>
-        <Button color="warning" size="lg" block onClick={this.toggle}>Admin Login</Button>
+        <Button color="warning" size="sm" className="login-btn" block onClick={this.toggle}>Admin Login</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Admin Login</ModalHeader>
           <ModalBody>
