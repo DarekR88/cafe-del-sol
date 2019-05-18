@@ -1,7 +1,13 @@
 .specials-font {
   font-family: 'Kelly Slab', cursive;
   font-size: 30px;
-  color: black;
   text-align: center;
-  margin: 10px;
+  padding-top: 10px;
+}
+
+.specials-text {
+  font-family: 'Kelly Slab', cursive;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 50px;
 }

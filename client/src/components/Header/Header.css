@@ -1,12 +1,11 @@
 .cds-logo {
   display: block;
   margin: auto;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   width: 700px;
 }
 
 .cds-font {
-  color: black;
   font-size: 120px;
   font-family: 'Kelly Slab', cursive;
   position: absolute;
