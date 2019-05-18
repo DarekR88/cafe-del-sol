@@ -1,0 +1,16 @@
+.cds-logo {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  width: 700px;
+}
+
+.cds-font {
+  color: black;
+  font-size: 120px;
+  font-family: 'Kelly Slab', cursive;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

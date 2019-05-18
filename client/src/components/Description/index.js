@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Col, Row, UncontrolledCarousel } from 'reactstrap';
 import { MenuList } from '../Menu';
+import './Description.css';
 
 const foodImg = [
   {
@@ -24,7 +25,7 @@ const Description = (props) => {
           <FoodCarousel />
         </Col>
 
-        <Col xs='6'>
+        <Col xs='6' className='resto-info'>
         <p>
         At Cafe Del Sol Mexican Restaurant, we want to provide you with a full, friendly service accompanied by enticing dishes that will bring you back time and time again. If you enjoy our dishes so much that you just want everyone and anyone to know about how delicious your experience is, we offer catering service for any special event you may have.
         <br />
@@ -41,7 +42,7 @@ const Description = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col sm="12" md={{ size: 6, offset: 3 }}>
+        <Col lg="12">
           <MenuList />
         </Col>
       </Row>
