@@ -21,7 +21,7 @@ class AdminPage extends Component {
     lunchItems: [],
     dinnerItems: [],
     appItems: [],
-    bColorOne: 'gray',
+    bColorOne: 'white',
     bColorTwo: 'white',
     textColorOne: 'black',
     textColorTwo: 'black',
@@ -423,12 +423,16 @@ class AdminPage extends Component {
             </form>
           </Col>
         </Row>
+        <br />
+        <br />
+        <br />
         <div>
           <Footer>
             <span>Cafe Del Sol &copy; 2019</span>
           </Footer>
         </div>
       </Container>
+      
     );
   }
 }
