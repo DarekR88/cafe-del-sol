@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import {Header} from 'reactstrap';
+import './Header.css';
 
-class Header extends Component {
+const logo = require('../../assets/img/cafedelsol-logo\ copy.png');
+
+class Logo extends Component {
   render() {
     return (
-      <div>
-        
+      <div className='cds-header'>
+        <img src={logo} className='cds-logo' />
       </div>
     );
   }
 }
 
-export default Header;
+export { Logo };

@@ -41,7 +41,7 @@ const Description = (props) => {
         </Col>
       </Row>
       <Row>
-        <Col sm="12" md={{ size: 6, offset: 3 }}>
+        <Col lg="12">
           <MenuList />
         </Col>
       </Row>

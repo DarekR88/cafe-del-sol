@@ -1,12 +1,14 @@
 .Footer {
-  background-color: purple;
+  background: url('https://c2.staticflickr.com/4/3655/5709255454_c2c8dd3731_b.jpg');
+  background-size: cover;
   font-size: 20px;
   color: white;
   display: block;
   padding: 20px;
   position: fixed;
   bottom: 0;
-  height: 60px;
+  left: 0;
+  height: 50px;
   width: 100%;
   text-align: center;
 }

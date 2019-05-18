@@ -7,12 +7,12 @@ import NoMatch from './pages/NoMatch';
 import { Nav } from './components/Nav';
 import { Logo } from './components/Jumbotron';
 
+// **FOR THE FRONT, WE JUST NEED THE JUMBOTRON WITH THE LOGO WITHOUT THE NAVBAR**
+
 class App extends Component {
   render() {
     return <Router forceRefresh={!'pushState' in window.history}>
       <div>
-        {/* <Nav /> */}
-        <Logo />
         <Switch>
           <Route exact path='/' component={FrontPage} />
           <Route exact path='/AdminPage' component={AdminPage} />

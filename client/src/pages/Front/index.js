@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Footer } from '../../components/Footer';
 import { Description } from '../../components/Description'
 import AdminLogin from '../../components/Modal';
+import { Logo } from '../../components/Header';
 
 class FrontPage extends Component {
   // Setting our component's initial state
@@ -40,6 +41,7 @@ class FrontPage extends Component {
     return (
     <div>
       <div>
+        <Logo />
         <Description />
       </div>
       <Footer>
