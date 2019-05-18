@@ -5,6 +5,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Container } from 
 import classnames from 'classnames';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
+import { NavBar } from '../../components/Nav';
 import './Admin.css';
 
 class AdminPage extends Component {
@@ -213,6 +214,7 @@ class AdminPage extends Component {
 
     return (
       <Container>
+        <NavBar />
         <Row>
           <Col sm='6'>
             <div className='AdminList'>
@@ -423,7 +425,7 @@ class AdminPage extends Component {
         </Row>
         <div>
           <Footer>
-            <span>Copyright 2019</span>
+            <span>Cafe Del Sol &copy; 2019</span>
           </Footer>
         </div>
       </Container>
