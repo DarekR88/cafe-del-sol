@@ -13,7 +13,9 @@ class MenuList extends React.Component {
       activeTab: '1',
       lunchItems: [],
       dinnerItems: [],
-      appItems: []
+      appItems: [],
+      backgroundColor: 'white',
+      textColor: 'black'
     };
 
   }
@@ -30,6 +32,7 @@ class MenuList extends React.Component {
     this.loadLunch()
     this.loadDinner()
     this.loadApps()
+    this.loadColors()
   }
 
   loadLunch() {
@@ -47,6 +50,15 @@ class MenuList extends React.Component {
   loadDinner() {
     API.getDinner()
       .then(res => this.setState({ dinnerItems: res.data[0].items }))
+      .catch(err => console.log(err))
+  }
+
+  loadColors() {
+    API.getColors()
+      .then(res => this.setState({
+        backgroundColor: res.data[0].backgroundColorTwo,
+        textColor: res.data[0].textColorTwo
+      }))
       .catch(err => console.log(err))
   }
 
@@ -87,7 +99,7 @@ class MenuList extends React.Component {
             <Row>
               <Col sm="12">
                 <Card>
-                  <CardBody>
+                  <CardBody style={{backgroundColor: this.state.backgroundColor, color: this.state.textColor}}>
                     <ul className='app-ul'>
                       {this.state.appItems.map((app, i) => {
                         return (
@@ -111,7 +123,7 @@ class MenuList extends React.Component {
             <Row>
               <Col sm="12">
                 <Card>
-                  <CardBody>
+                  <CardBody style={{backgroundColor: this.state.backgroundColor, color: this.state.textColor}}>
                     <ul className='lunch-ul'>
                       {this.state.lunchItems.map((lunch, i) => {
                         return (
@@ -135,7 +147,7 @@ class MenuList extends React.Component {
             <Row>
               <Col sm="12">
                 <Card>
-                  <CardBody>
+                  <CardBody style={{backgroundColor: this.state.backgroundColor, color: this.state.textColor}}>
                     <ul className='lunch-ul'>
                       {this.state.dinnerItems.map((dinner, i) => {
                         return (
