@@ -86,7 +86,7 @@ class MenuList extends React.Component {
           <TabPane tabId="1">
             <Row>
               <Col sm="12">
-                <Card>
+                <Card body outline color="secondary">
                   <CardBody>
                     <ul className='app-ul'>
                       {this.state.appItems.map((app, i) => {
@@ -110,7 +110,7 @@ class MenuList extends React.Component {
           <TabPane tabId="2">
             <Row>
               <Col sm="12">
-                <Card>
+                <Card body outline color="secondary">
                   <CardBody>
                     <ul className='lunch-ul'>
                       {this.state.lunchItems.map((lunch, i) => {
@@ -134,7 +134,7 @@ class MenuList extends React.Component {
           <TabPane tabId="3">
             <Row>
               <Col sm="12">
-                <Card>
+                <Card body outline color="secondary">
                   <CardBody>
                     <ul className='lunch-ul'>
                       {this.state.dinnerItems.map((dinner, i) => {

@@ -1,28 +1,41 @@
+body {
+  background-color: rgb(211, 211, 211)!important;
+}
+
 .Admin-Input {
+  background-color: white;
   height: 600px;
+  margin-top: 20px;
   margin-right: 10px;
   border: 1px solid black;
+  border-radius: 15px;
   padding: 10px;
-  margin-bottom: 30px;
+}
+
+.AdminList {
+  margin-top: 20px;
 }
 
 .textArea {
+  position: relative;
   resize: none;
   height: 250px;
-  width: 500px;
+  width: 100%;
   overflow-x: scroll;
   word-wrap: break-word;
 }
 
 .dealText {
+  position: relative;
   resize: none;
   height: 130px;
-  width: 500px;
+  width: 100%;
   overflow-x: scroll;
   word-wrap: break-word;
 }
 
 .preview {
+  margin-top: 20px;
   height: 500px;
   border: solid 2px black;
 }

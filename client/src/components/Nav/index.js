@@ -45,7 +45,7 @@ export default class NavBar extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/">
-                  <Button color="info">Return To Home</Button>
+                  <Button color="info">Return To Main</Button>
                 </NavLink>
               </NavItem>
             </Nav>

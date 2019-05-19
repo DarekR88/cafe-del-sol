@@ -6,6 +6,7 @@ import { Description } from '../../components/Description'
 import AdminLogin from '../../components/Modal';
 import { Logo } from '../../components/Header';
 import { Special } from '../../components/Specials';
+import './Front.css';
 
 class FrontPage extends Component {
   // Setting our component's initial state
