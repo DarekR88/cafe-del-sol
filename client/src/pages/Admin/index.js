@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Container } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Container, Card, CardBody } from 'reactstrap';
 import classnames from 'classnames';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
@@ -251,18 +251,22 @@ class AdminPage extends Component {
                 <TabPane tabId="1">
                   <Row>
                     <Col sm="12">
-                      <ul className='app-ul'>
-                        {this.state.appItems.map((app, i) => {
-                          return (
-                            <li key={i}>
-                              <p>{app.name}</p>
-                              <p>{app.description}</p>
-                              <p>${app.price}</p>
-                              <button onClick={() => this.deleteItem(app.name)}>Delete item</button>
-                            </li>
-                          )
-                        })}
-                      </ul>
+                      <Card body outline color="secondary">
+                        <CardBody>
+                          <ul className='app-ul'>
+                            {this.state.appItems.map((app, i) => {
+                              return (
+                                <li key={i}>
+                                  <p>{app.name}</p>
+                                  <p>{app.description}</p>
+                                  <p>${app.price}</p>
+                                  <button onClick={() => this.deleteItem(app.name)}>Delete item</button>
+                                </li>
+                              )
+                            })}
+                          </ul>
+                        </CardBody>
+                      </Card>
                     </Col>
                   </Row>
                 </TabPane>
@@ -272,18 +276,22 @@ class AdminPage extends Component {
                 <TabPane tabId="2">
                   <Row>
                     <Col sm="12">
-                      <ul className='lunch-ul'>
-                        {this.state.lunchItems.map((lunch, i) => {
-                          return (
-                            <li key={i}>
-                              <p>{lunch.name}</p>
-                              <p>{lunch.description}</p>
-                              <p>${lunch.price}</p>
-                              <button onClick={() => this.deleteItem(lunch.name)}>Delete item</button>
-                            </li>
-                          )
-                        })}
-                      </ul>
+                      <Card body outline color="secondary">
+                        <CardBody>
+                          <ul className='lunch-ul'>
+                            {this.state.lunchItems.map((lunch, i) => {
+                              return (
+                                <li key={i}>
+                                  <p>{lunch.name}</p>
+                                  <p>{lunch.description}</p>
+                                  <p>${lunch.price}</p>
+                                  <button onClick={() => this.deleteItem(lunch.name)}>Delete item</button>
+                                </li>
+                              )
+                            })}
+                          </ul>
+                        </CardBody>
+                      </Card>
                     </Col>
                   </Row>
                 </TabPane>
@@ -293,18 +301,22 @@ class AdminPage extends Component {
                 <TabPane tabId="3">
                   <Row>
                     <Col sm="12">
-                      <ul className='dinner-ul'>
-                        {this.state.dinnerItems.map((dinner, i) => {
-                          return (
-                            <li key={i}>
-                              <p>{dinner.name}</p>
-                              <p>{dinner.description}</p>
-                              <p>${dinner.price}</p>
-                              <button onClick={() => this.deleteItem(dinner.name)}>Delete item</button>
-                            </li>
-                          )
-                        })}
-                      </ul>
+                      <Card body outline color="secondary">
+                        <CardBody>
+                          <ul className='dinner-ul'>
+                            {this.state.dinnerItems.map((dinner, i) => {
+                              return (
+                                <li key={i}>
+                                  <p>{dinner.name}</p>
+                                  <p>{dinner.description}</p>
+                                  <p>${dinner.price}</p>
+                                  <button onClick={() => this.deleteItem(dinner.name)}>Delete item</button>
+                                </li>
+                              )
+                            })}
+                          </ul>
+                        </CardBody>
+                      </Card>
                     </Col>
                   </Row>
                 </TabPane>
