@@ -51,7 +51,7 @@ class Description extends Component {
             </Col>
 
             <Col xs='6' className='resto-info'>
-              <center><p>About Us:</p></center>
+              <center><p style={{fontSize: '40px'}}>About Us</p></center>
               <p>
                 At Cafe Del Sol Mexican Restaurant, we want to provide you with a full, friendly service accompanied by enticing dishes that will bring you back time and time again. If you enjoy our dishes so much that you just want everyone and anyone to know about how delicious your experience is, we offer catering service for any special event you may have.
                 <br />
@@ -60,9 +60,10 @@ class Description extends Component {
               </p>
               <br />
               <p>For any questions regarding our catering services, please contact us at:
-              <br /><b>(281) 574-8607</b></p>
+              <br /><b style={{fontSize: '20px'}}>(281) 574-8607</b></p>
               <p>We are located at:
-              <br /> <b>23945 Franz Rd, Katy, TX 77493</b>
+              <br /><b style={{fontSize: '20px'}}>23945 Franz Rd
+              <br /> Katy, TX 77493</b>
               </p>
             </Col>
           </Row>
