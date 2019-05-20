@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import { Input, TextArea, FormBtn } from '../../components/Form';
 import { Footer } from '../../components/Footer';
 import { NavBar } from '../../components/Nav';
+import { DeleteBtn } from '../../components/DeleteBtn';
 import './Admin.css';
 
 class AdminPage extends Component {
@@ -259,8 +260,8 @@ class AdminPage extends Component {
                                 <li key={i}>
                                   <p>{app.name}</p>
                                   <p>{app.description}</p>
-                                  <p>${app.price}</p>
-                                  <button onClick={() => this.deleteItem(app.name)}>Delete item</button>
+                                  <p>${app.price}
+                                  <DeleteBtn onClick={() => this.deleteItem(app.name)} /></p>
                                 </li>
                               )
                             })}
@@ -284,8 +285,8 @@ class AdminPage extends Component {
                                 <li key={i}>
                                   <p>{lunch.name}</p>
                                   <p>{lunch.description}</p>
-                                  <p>${lunch.price}</p>
-                                  <button onClick={() => this.deleteItem(lunch.name)}>Delete item</button>
+                                  <p>${lunch.price}
+                                  <DeleteBtn onClick={() => this.deleteItem(lunch.name)} /></p>
                                 </li>
                               )
                             })}
@@ -309,8 +310,8 @@ class AdminPage extends Component {
                                 <li key={i}>
                                   <p>{dinner.name}</p>
                                   <p>{dinner.description}</p>
-                                  <p>${dinner.price}</p>
-                                  <button onClick={() => this.deleteItem(dinner.name)}>Delete item</button>
+                                  <p>${dinner.price}
+                                  <DeleteBtn onClick={() => this.deleteItem(dinner.name)} /></p>
                                 </li>
                               )
                             })}
@@ -370,7 +371,7 @@ class AdminPage extends Component {
           </Col>
 
           <Col sm='6'>
-            <form className='Admin-Input'>
+            <form className='Colors-Input'>
               <p>Background color 1</p>
               <select value={this.state.bColorOne} onChange={this.handleColorSelectOne}>
                 <option value="gray">gray</option>
