@@ -2,13 +2,22 @@ body {
   background-color: rgb(211, 211, 211)!important;
 }
 
-.Admin-Input {
-  background-color: white;
-  height: 600px;
+.Colors-Input {
+  height: 620px !important;
   margin-top: 20px;
+}
+
+.Admin-Input {
+  height: 540px;
+  margin-top: 65px;
+}
+
+.Admin-Input, .Colors-Input {
+  background-color: white;
   margin-right: 10px;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 3px;
+  padding-top: 20px !important;
   padding: 10px;
 }
 

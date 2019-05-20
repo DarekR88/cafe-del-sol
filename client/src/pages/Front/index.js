@@ -9,13 +9,6 @@ import { Special } from '../../components/Specials';
 import './Front.css';
 
 class FrontPage extends Component {
-  // Setting our component's initial state
-
-  state = {
-    
-  }
-  
-
   render() {
     return (
     <div>
