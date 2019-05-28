@@ -1,2 +1,3 @@
-# mern-bp
-Hi! If you've somehow stumbled upon this. This is a MERN boilerplate I made to make my life easier when I make apps real quick.
+# Restaurant Website Manager
+This is an application the will allow a restaurant manager to easily theme and modify their restaurants website.
+![home](images/cafeProject.PNG?raw=true "home page")
