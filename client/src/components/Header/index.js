@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Header} from 'reactstrap';
 import './Header.css';
 import API from "../../utils/API";
+import { Link } from 'react-router-dom'
 
 const logo = require('../../assets/img/cafedelsol-logo.png');
 
@@ -31,6 +32,7 @@ class Logo extends Component {
     }
     return (
       <div style={logoStyle}>
+        <Link to="/AdminPage">Admin Portal</Link>
         <img src={logo} className='cds-logo' />
         <p className='cds-font'>Cafe Del Sol</p>
       </div>
